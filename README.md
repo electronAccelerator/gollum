@@ -93,7 +93,15 @@ Gollum can also be ran alongside a CAS (Central Authentication Service) SSO (sin
 
 ### Docker
 
-Gollum can also be ran via [Docker](https://www.docker.com/). More on that [over here](https://github.com/gollum/gollum/wiki/Gollum-via-Docker).
+This repo already has the Dockerfile and docker-compose.yaml file to allow for immediate deployment to a web server such as AWS Elastic Beanstalk via Docker.
+If you make specific changes to this repository you want to then deploy it easily,
+1) Change the docker-compose.yaml file's Image name  from `electronaccelerator/gollum` to `your_docker_username/image_name`
+2) use command `$ docker build -t your_docker_username/image_name .` to build the image. Don't forget the period!
+3) then command `$ docker push your_docker_username/image_name` to push the image to your Docker registry
+Follow the rest of the stenps by [Prakhar Srivastav](https://docker-curriculum.com/#docker-on-aws) to deploy the application.
+
+Original Information: Gollum can also be ran via [Docker](https://www.docker.com/). More on that [over here](https://github.com/gollum/gollum/wiki/Gollum-via-Docker).
+
 
 ### Service
 
